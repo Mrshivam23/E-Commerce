@@ -14,7 +14,7 @@ class ProductView(View):
             {'topwears': topwears,'bottomwears': bottomwears,'mobiles': mobiles})
         
 class ProductDetailView(View):
-    def get(self, request,pk):
+    def get(self,request,pk):
         product = Product.objects.get(pk=pk)
         return render(request, 'app/productdetail.html',{'product':product})
                 
